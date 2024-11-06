@@ -17,14 +17,8 @@ const Ststistics = () => {
               <p className="text-center text-white py-3">Explore the latest gadgets that will take your experience to the next level. From smart devices <br></br> to the coolest accessories, we have it all!</p>
             </div>
            <div className="h-60">
-           {/* <div>
-        <BarChart width={600} height={600} data={data}>
-            <XAxis></XAxis>
-            <YAxis></YAxis>
-            <Bar dataKey={price}></Bar>
-        </BarChart>
-
-           </div> */}
+            
+          
            </div>
             <Footer></Footer>
         </>

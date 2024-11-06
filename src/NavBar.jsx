@@ -41,7 +41,7 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end flex gap-6">
-                    <button><i className="fa-solid fa-cart-shopping"></i></button>
+                    <button><i className="fa-solid fa-cart-shopping"></i> </button>             
                     <button><i className="fa-regular fa-heart"></i></button>
                 </div>
                 <div>
