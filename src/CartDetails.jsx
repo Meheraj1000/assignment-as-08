@@ -1,5 +1,8 @@
 /* eslint-disable react/prop-types */
 const CartDetails = ({ product,handelRemove }) => {
+
+
+    
     const { product_image, category, product_title, price,product_id } = product || {}
     return (
         <>

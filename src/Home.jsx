@@ -4,6 +4,7 @@ import Categories from "./Categories";
 import Banner from "./Banner";
 import Img from "./Img";
 import{ Toaster } from 'react-hot-toast';
+import Footer from "./Footer";
 
 
 
@@ -20,7 +21,7 @@ const Home = () => {
             <Categories categories={categories}></Categories>
             <Outlet></Outlet>
             
-            
+            <Footer></Footer>
         </div>
     );
 };

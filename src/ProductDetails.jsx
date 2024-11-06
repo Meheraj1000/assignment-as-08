@@ -14,7 +14,7 @@ const ProductDetails = () => {
        setProdect(singleData)
     },[data,product_id])
 
-    
+
     const{product_title,product_image,category,description,price,specification,rating}=prodect;
   
     const handelFavorite=(prodect)=>{

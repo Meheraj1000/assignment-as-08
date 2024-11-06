@@ -3,13 +3,14 @@ import NavBar from "./NavBar";
 import { getAllFavorites, remooveFavorite } from "./utils";
 import CartDetails from "./CartDetails";
 import { Toaster } from 'react-hot-toast';
-import { NavLink, Outlet } from "react-router-dom";
-import DashbortCard from "./DashbortCard";
 import { handelCartdbtn, handelwistlist } from "./feacture";
+import Footer from "./Footer";
+
 
 
 
 const DashBord = () => {
+
     const handelRemove = product_id => {
         remooveFavorite(product_id)
         const favorites = getAllFavorites()
@@ -21,6 +22,14 @@ const DashBord = () => {
         const favorites = getAllFavorites()
         setProdect(favorites)
     }, [])
+
+    const handelSort=(sortBy)=>{
+        if(sortBy=='price'){
+            const sorted=[...prodect].sort((a,b)=>b.price-a.price)
+              setProdect(sorted)
+        }
+       }
+
     return (
         <>
             <Toaster></Toaster>
@@ -40,7 +49,7 @@ const DashBord = () => {
                  <div className=" flex justify-between items-center gap-4">
                     <div className="font-bold">Total Cast:</div>
                     <div className="flex gap-4">
-                    <button className="btn px-8 rounded-full border-2 border-zinc-400">Sort by price</button>
+                    <button onClick={()=>handelSort('price')} className="btn px-8 rounded-full border-2 border-zinc-400">Sort by price</button>
                     <button className="btn px-8 rounded-full border-2 border-zinc-400">Purchase</button>
                     </div>
                 </div>
@@ -59,6 +68,7 @@ const DashBord = () => {
                 </div>
 
             </div>
+            <Footer></Footer>
         </>
     );
 };
