@@ -21,12 +21,15 @@ const ProductCart = () => {
     },[category,data])
     return (
        <>
+       <div className="flex justify-center items-center">
+       <button className="btn " onClick={()=>setProduct(data)}>View All</button>
+       </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 pt-7">
             {
                 product.map(product=><Cart key={product.product_id} product={product}></Cart>)
             }
         </div>
-        <button className="btn " onClick={()=>setProduct(data)}>View All</button>
+        
        </>
     );
 };
