@@ -11,6 +11,7 @@ import Ststistics from './Ststistics';
 import DashBord from './DashBord';
 import ProductCart from './ProductCart';
 import ProductDetails from './ProductDetails';
+import DashbortCard from './DashbortCard';
 
 
 
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
     path:'/product/:product_id',
     element:<ProductDetails></ProductDetails>,
     loader:()=>fetch('productData.json')
+  },
+  {
+    path:'/dashbordcard',
+    element:<DashbortCard></DashbortCard>
   }
 ]);
 

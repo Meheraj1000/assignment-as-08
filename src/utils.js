@@ -34,11 +34,17 @@ import toast from "react-hot-toast"
 
 
 // remove a product from stroage
+ const remooveFavorite=(product_id)=>{
+    const favorites=getAllFavorites()
+    const remaining=favorites.filter(process=>process.product_id !=product_id)
+    localStorage.setItem('favorites',JSON.stringify(remaining))
+     toast.success('Successfully Removed!')
+
+ }
 
 
 
 
 
 
-
-export{addFavorite,getAllFavorites}
+export{addFavorite,getAllFavorites,remooveFavorite}
