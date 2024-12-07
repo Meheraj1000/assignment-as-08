@@ -10,6 +10,7 @@ import Footer from "./Footer";
 
 const Home = () => {
     const categories=useLoaderData()
+    //console.log(categories)
     return (
         <div>
             <Toaster/>

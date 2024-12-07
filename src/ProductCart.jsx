@@ -7,12 +7,15 @@ const ProductCart = () => {
     const navigate=useNavigate()
     const data=useLoaderData()
     const {category}=useParams()
+    console.log({data})
+    console.log({category})
 
     const [product,setProduct]=useState([])
     useEffect(()=>{
         if(category){
-            const filtercallByCategory=[...data].filter(
-                product=>product.category==category)
+
+            const filtercallByCategory=[...data].filter(product=>product.category===category)
+            console.log({filtercallByCategory})
                 setProduct(filtercallByCategory)
         }
         else{
